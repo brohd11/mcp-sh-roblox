@@ -53,9 +53,18 @@ commands. On Windows, point it at `StudioMCP.exe`:
 `roblox-shell mcp add studio -- "C:\path\to\StudioMCP.exe"`. The script binding
 and defaults are kept.
 
-Your own Luau commands go in `~/.agent-shell/roblox/commands/` (or
-`./.agent-shell/roblox/commands/` for one project). A `_lib.luau` there is appended to the
-built-in one. See the agent-shell README for the script format and config keys.
+## Your own commands
+
+Keep your own Luau commands in a folder of their own, such as a git repo, and add it:
+
+```sh
+roblox-shell commands add ~/code/roblox-tools
+```
+
+A `_lib.luau` in that folder is appended to the built-in one, so your scripts can use and
+extend `lib`. A script with a built-in's name replaces it, and the listing says so.
+Quick one-offs can also go straight into `~/.agent-shell/roblox/commands/`. See the
+agent-shell README for the script format and folder order.
 
 ## Development
 
