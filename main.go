@@ -1,11 +1,11 @@
-// roblox-shell: a sandboxed bash shell over Roblox Studio, served over MCP.
-// See `roblox-shell --help` and the README.
+// mcp-sh-roblox: a sandboxed bash shell over Roblox Studio, served over MCP.
+// See `mcp-sh-roblox --help` and the README.
 package main
 
 import (
 	"embed"
 
-	"github.com/brohd11/agent-shell"
+	"github.com/brohd11/mcp-sh"
 )
 
 // appFS is the built-in config layer. Directory embeds skip files starting with "_",
@@ -18,11 +18,11 @@ var appFS embed.FS
 var version = "dev"
 
 func main() {
-	agentshell.Main(agentshell.Config{
-		Name:       "roblox-shell",
+	mcpsh.Main(mcpsh.Config{
+		Name:       "mcp-sh-roblox",
 		App:        "roblox",
 		Version:    version,
-		UpdateRepo: "brohd11/roblox-shell",
+		UpdateRepo: "brohd11/mcp-sh-roblox",
 		FS:         appFS,
 	})
 }

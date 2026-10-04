@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/brohd11/agent-shell/profile"
+	"github.com/brohd11/mcp-sh/profile"
 )
 
 func load(t *testing.T) *profile.Loaded {

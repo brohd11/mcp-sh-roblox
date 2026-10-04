@@ -1,6 +1,6 @@
-# Install roblox-shell into %LOCALAPPDATA%\bin.
+# Install mcp-sh-roblox into %LOCALAPPDATA%\bin.
 #
-#   irm https://raw.githubusercontent.com/brohd11/roblox-shell/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/brohd11/mcp-sh-roblox/main/install.ps1 | iex
 #
 # Env overrides (set them before the pipeline):
 #   $env:BIN_DIR = 'C:\tools'    install target   (default: %LOCALAPPDATA%\bin)
@@ -13,8 +13,8 @@
 # Update the template, then run the workspace's render-go.sh.
 
 # ---- config ----
-$Repo       = 'brohd11/roblox-shell'
-$Binary     = 'roblox-shell'
+$Repo       = 'brohd11/mcp-sh-roblox'
+$Binary     = 'mcp-sh-roblox'
 $ArchiveExt = 'zip'                                # zip | tar.gz
 $Supported  = 'windows-amd64'
 

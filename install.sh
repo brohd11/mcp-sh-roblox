@@ -1,7 +1,7 @@
 #!/bin/sh
-# Install roblox-shell into ~/.local/bin.
+# Install mcp-sh-roblox into ~/.local/bin.
 #
-#   curl -fsSL https://raw.githubusercontent.com/brohd11/roblox-shell/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/brohd11/mcp-sh-roblox/main/install.sh | sh
 #
 # Env overrides:
 #   BIN_DIR=/usr/local/bin   install target   (default: ~/.local/bin)
@@ -14,8 +14,8 @@
 set -eu
 
 # ---- config ----
-REPO="brohd11/roblox-shell"
-BINARY="roblox-shell"
+REPO="brohd11/mcp-sh-roblox"
+BINARY="mcp-sh-roblox"
 ARCHIVE_EXT="zip"
 SUPPORTED="darwin-arm64 darwin-amd64"
 

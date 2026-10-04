@@ -1,23 +1,23 @@
-# roblox-shell
+# mcp-sh-roblox
 
 A sandboxed bash shell over Roblox Studio, served over MCP. Built on
-[agent-shell](https://github.com/brohd11/agent-shell): it starts Studio's built-in MCP
+[mcp-sh](https://github.com/brohd11/mcp-sh): it starts Studio's built-in MCP
 server (the `StudioMCP` binary in the app, stdio) and adds Luau editing commands.
 
 ```sh
-roblox-shell run 'query --class BasePart --where Anchored=false | prop set Anchored true'
-roblox-shell run 'studio list_roblox_studios'
+mcp-sh-roblox run 'query --class BasePart --where Anchored=false | prop set Anchored true'
+mcp-sh-roblox run 'studio list_roblox_studios'
 ```
 
 ## Install
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/brohd11/roblox-shell/main/install.sh | sh
-roblox-shell setup        # ~/.agent-shell/roblox/ + `claude mcp add -s user roblox-shell -- <path>`
-roblox-shell commands     # check what the shell can reach
+curl -fsSL https://raw.githubusercontent.com/brohd11/mcp-sh-roblox/main/install.sh | sh
+mcp-sh-roblox setup        # ~/.mcp-sh/roblox/ + `claude mcp add -s user mcp-sh-roblox -- <path>`
+mcp-sh-roblox commands     # check what the shell can reach
 ```
 
-On Windows: `irm https://raw.githubusercontent.com/brohd11/roblox-shell/main/install.ps1 | iex`.
+On Windows: `irm https://raw.githubusercontent.com/brohd11/mcp-sh-roblox/main/install.ps1 | iex`.
 
 Keep Roblox Studio open with a place loaded and its built-in MCP server enabled.
 
@@ -47,10 +47,10 @@ undo step in Studio, since `execute_luau` records it. If any target fails, the c
 reverts its own changes first: values are converted before anything changes, and a
 journal undoes changes made before a later failure.
 
-roblox-shell was verified against Studio 0.741 on macOS. It reads its 28 tools,
+mcp-sh-roblox was verified against Studio 0.741 on macOS. It reads its 28 tools,
 fills `studio_id` and `datamodel_type` automatically, and runs `execute_luau` script
 commands. On Windows, point it at `StudioMCP.exe`:
-`roblox-shell mcp add studio -- "C:\path\to\StudioMCP.exe"`. The script binding
+`mcp-sh-roblox mcp add studio -- "C:\path\to\StudioMCP.exe"`. The script binding
 and defaults are kept.
 
 ## Your own commands
@@ -58,18 +58,18 @@ and defaults are kept.
 Keep your own Luau commands in a folder of their own, such as a git repo, and add it:
 
 ```sh
-roblox-shell commands add ~/code/roblox-tools
+mcp-sh-roblox commands add ~/code/roblox-tools
 ```
 
 A `_lib.luau` in that folder is appended to the built-in one, so your scripts can use and
 extend `lib`. A script with a built-in's name replaces it, and the listing says so.
-Quick one-offs can also go straight into `~/.agent-shell/roblox/commands/`. See the
-agent-shell README for the script format and folder order.
+Quick one-offs can also go straight into `~/.mcp-sh/roblox/commands/`. See the
+mcp-sh README for the script format and folder order.
 
 ## Development
 
 ```sh
-make           # host build -> build/<os>-<arch>/roblox-shell
+make           # host build -> build/<os>-<arch>/mcp-sh-roblox
 make test
 make package   # release archives for every platform
 ```

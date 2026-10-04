@@ -1,4 +1,4 @@
--- Shared helpers for roblox-shell's script commands, available to every
+-- Shared helpers for mcp-sh-roblox's script commands, available to every
 -- command as `lib`. A user commands/_lib.luau is appended after this one and can add
 -- or replace helpers.
 local HttpService = game:GetService("HttpService")
