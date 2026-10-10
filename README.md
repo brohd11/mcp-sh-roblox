@@ -13,7 +13,7 @@ mcp-sh-roblox run 'studio list_roblox_studios'
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/brohd11/mcp-sh-roblox/main/install.sh | sh
-mcp-sh-roblox setup        # ~/.mcp-sh/roblox/ + `claude mcp add -s user mcp-sh-roblox -- <path>`
+mcp-sh-roblox setup        # ~/.mcp-sh/roblox/ + prints the claude/codex mcp add commands
 mcp-sh-roblox commands     # check what the shell can reach
 ```
 
