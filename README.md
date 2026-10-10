@@ -1,5 +1,9 @@
 # mcp-sh-roblox
 
+
+## **Warning**
+I was banned not long after testing this tool. It may be coincidental timing with Roblox ToS change, but I can't confirm as I won't be appealing the ban or using Roblox going forward.
+
 A sandboxed bash shell over Roblox Studio, served over MCP. Built on
 [mcp-sh](https://github.com/brohd11/mcp-sh): it starts Studio's built-in MCP
 server (the `StudioMCP` binary in the app, stdio) and adds Luau editing commands.
